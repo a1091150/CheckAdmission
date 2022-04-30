@@ -35,11 +35,11 @@ def getAdmissionList(group_no:String):
             # admission_list.append("\033[0;33m" + content + "\033[0m")
             # ()
 
-    title = soup.find("div", attrs={"class": "page-header"}).text
+    title = soup.find("div", attrs={"class": "page-header"}).text.replace("\n","")
     print("\033[1;31m" + title + "\033[0m")
     for cc in admission_list:
         print(cc)
-    print("")
+#    print("")
     for cc in wait_list:
         print(cc)
 
